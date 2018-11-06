@@ -39,8 +39,8 @@ Provisions
 
 """
 
-from hfos.schemata.defaultform import editbuttons
-from hfos.schemata.base import base_object, uuid_object
+from isomer.schemata.defaultform import editbuttons
+from isomer.schemata.base import base_object, uuid_object
 
 # Basic File definitions
 

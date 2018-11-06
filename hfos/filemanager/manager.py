@@ -18,7 +18,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from hfos.misc import std_uuid
+from isomer.misc import std_uuid
 
 __author__ = "Heiko 'riot' Weinen"
 __license__ = "AGPLv3"
@@ -38,10 +38,10 @@ from hashlib import md5
 
 from circuits import Worker, task, Event, Timer
 
-from hfos.events.client import send
-from hfos.component import ConfigurableComponent, authorizedevent, handler
-from hfos.database import ValidationError, objectmodels
-from hfos.logger import error, warn, verbose, hilight
+from isomer.events.client import send
+from isomer.component import ConfigurableComponent, authorized_event, handler
+from isomer.database import ValidationError, objectmodels
+from isomer.logger import error, warn, verbose, hilight
 
 try:
     PermissionError
@@ -113,19 +113,19 @@ def filewalk(top, component, links=None):
     return data, log
 
 
-class get(authorizedevent):
+class get(authorized_event):
     """FileManager Event"""
 
 
-class get_directory(authorizedevent):
+class get_directory(authorized_event):
     """FileManager Event"""
 
 
-class get_volumes(authorizedevent):
+class get_volumes(authorized_event):
     """FileManager Event"""
 
 
-class put(authorizedevent):
+class put(authorized_event):
     """FileManager Event"""
 
 
@@ -135,7 +135,7 @@ class FileManager(ConfigurableComponent):
 
     """
 
-    channel = "hfosweb"
+    channel = 'isomer-web'
 
     configprops = {}
 

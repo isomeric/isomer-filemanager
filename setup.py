@@ -44,12 +44,12 @@ hfos-navdata package.
       install_requires=[
           'hfos>=1.2.0',
       ],
-      entry_points="""[hfos.components]
+      entry_points="""[isomer.components]
     filemanager=hfos.filemanager.manager:FileManager
-    [hfos.schemata]
+    [isomer.schemata]
     file=hfos.filemanager.file:File
     volume=hfos.filemanager.volume:Volume
-    [hfos.provisions]
+    [isomer.provisions]
     volume=hfos.filemanager.provisions.volume:provision
     """,
       test_suite="tests.main.main",
