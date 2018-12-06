@@ -3,7 +3,7 @@
  * # -*- coding: UTF-8 -*-
  *
  * __license__ = """
- * Hackerfleet Operating System
+ * Isomer Application Framework
  * ============================
  * Copyright (C) 2011- 2018 riot <riot@c-base.org> and others.
  *
@@ -121,7 +121,7 @@ class FileManagerService {
             }
         }
 
-        self.socket.listen('hfos.filemanager.manager', handleFilemanagerResponse);
+        self.socket.listen('isomer.filemanager.manager', handleFilemanagerResponse);
 
 
         this.get_volumes = function () {
@@ -129,7 +129,7 @@ class FileManagerService {
             let reqid = self.getRequestId();
 
             self.socket.send({
-                component: 'hfos.filemanager.manager',
+                component: 'isomer.filemanager.manager',
                 action: 'get_volumes',
                 data: {
                     req: reqid
@@ -153,7 +153,7 @@ class FileManagerService {
             let reqid = self.getRequestId();
 
             self.socket.send({
-                component: 'hfos.filemanager.manager',
+                component: 'isomer.filemanager.manager',
                 action: 'get_directory',
                 data: {
                     uuid: uuid,
@@ -178,7 +178,7 @@ class FileManagerService {
             let reqid = self.getRequestId();
 
             self.socket.send({
-                component: 'hfos.filemanager.manager',
+                component: 'isomer.filemanager.manager',
                 action: 'get',
                 data: {
                     req: reqid,
@@ -216,7 +216,7 @@ class FileManagerService {
                 console.debug('[FMS] SendFile event');
                 raw = e.target.result;
                 let msg = {
-                    component: 'hfos.filemanager.manager',
+                    component: 'isomer.filemanager.manager',
                     action: 'put',
                     data: {
                         req: reqid,
@@ -257,7 +257,7 @@ class FileManagerService {
         } else {
             data = things;
         }
-        this.socket.send({'component': 'hfos.filemanager.manager', 'action': 'subscribe', 'data': data});
+        this.socket.send({'component': 'isomer.filemanager.manager', 'action': 'subscribe', 'data': data});
     }
 
     unsubscribe(things) {
@@ -268,7 +268,7 @@ class FileManagerService {
         } else {
             data = things;
         }
-        this.socket.send({'component': 'hfos.filemanager.manager', 'action': 'unsubscribe', 'data': data});
+        this.socket.send({'component': 'isomer.filemanager.manager', 'action': 'unsubscribe', 'data': data});
     }
 
     */
@@ -279,7 +279,7 @@ class FileManagerService {
         let reqid = this.getRequestId();
 
         this.socket.send({
-            'component': 'hfos.filemanager.manager',
+            'component': 'isomer.filemanager.manager',
             'action': 'delete',
             'data': {
                 'req': reqid,

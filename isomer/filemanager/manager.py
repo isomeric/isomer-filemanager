@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# HFOS - Hackerfleet Operating System
-# ===================================
+# Isomer Application Framework
+# ============================
 # Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -207,7 +207,7 @@ class FileManager(ConfigurableComponent):
             self.log('Request without request id!', lvl=warn)
 
         response = {
-            'component': 'hfos.filemanager.manager',
+            'component': 'isomer.filemanager.manager',
             'action': 'get_volumes',
             'data': {
                 'req': req,
@@ -249,7 +249,7 @@ class FileManager(ConfigurableComponent):
             self.log('Request without request id!', lvl=warn)
 
         response = {
-            'component': 'hfos.filemanager.manager',
+            'component': 'isomer.filemanager.manager',
             'action': 'get_directory',
             'data': {
                 'directory': self._get_directory(volume, path),
@@ -296,7 +296,7 @@ class FileManager(ConfigurableComponent):
         self.log('Cancelling request', event.action, 'for user', event.user.uuid, ', reason:', reason)
 
         result = {
-            'component': 'hfos.filemanager.manager',
+            'component': 'isomer.filemanager.manager',
             'action': event.action,
             'data': {
                 'req': event.data.get('req', None),
@@ -379,7 +379,7 @@ class FileManager(ConfigurableComponent):
         fileobject.save()
 
         response = {
-            'component': 'hfos.filemanager.manager',
+            'component': 'isomer.filemanager.manager',
             'action': 'put',
             'data': {
                 'success': True,

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# HFOS - Hackerfleet Operating System
-# ===================================
+# Isomer Application Framework
+# ============================
 # Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -23,34 +23,33 @@ __license__ = "AGPLv3"
 
 from setuptools import setup, find_packages
 
-setup(name="hfos-filemanager",
+setup(name="isomer-filemanager",
       version="0.0.1",
-      description="hfos-filemanager",
-      author="Hackerfleet Community",
+      description="isomer-filemanager",
+      author="Isomer Community",
       author_email="riot@c-base.org",
-      url="https://github.com/hackerfleet/hfos-automat",
+      url="https://github.com/isomeric/isomer-automat",
       license="GNU Affero General Public License v3",
       packages=find_packages(),
-      long_description="""HFOS - FileManager
-==================
+      long_description="""Isomer - FileManager
+====================
 
 The file manager module offers a node local file manager.
 
-This software package is a plugin module for HFOS and requires the
-hfos-navdata package.
+This software package is a plugin module for Isomer.
 """,
       dependency_links=[
       ],
       install_requires=[
-          'hfos>=1.2.0',
+          'isomer>=1.0.0',
       ],
       entry_points="""[isomer.components]
-    filemanager=hfos.filemanager.manager:FileManager
+    filemanager=isomer.filemanager.manager:FileManager
     [isomer.schemata]
-    file=hfos.filemanager.file:File
-    volume=hfos.filemanager.volume:Volume
+    file=isomer.filemanager.file:File
+    volume=isomer.filemanager.volume:Volume
     [isomer.provisions]
-    volume=hfos.filemanager.provisions.volume:provision
+    volume=isomer.filemanager.provisions.volume:provision
     """,
       test_suite="tests.main.main",
       )
