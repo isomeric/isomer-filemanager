@@ -23,27 +23,28 @@ __license__ = "AGPLv3"
 
 from setuptools import setup, find_packages
 
-setup(name="isomer-filemanager",
-      version="0.0.1",
-      description="isomer-filemanager",
-      author="Isomer Community",
-      author_email="riot@c-base.org",
-      url="https://github.com/isomeric/isomer-automat",
-      license="GNU Affero General Public License v3",
-      packages=find_packages(),
-      long_description="""Isomer - FileManager
+setup(
+    name="isomer-filemanager",
+    version="0.0.1",
+    description="isomer-filemanager",
+    author="Isomer Community",
+    author_email="riot@c-base.org",
+    url="https://github.com/isomeric/isomer-automat",
+    license="GNU Affero General Public License v3",
+    packages=find_packages(),
+    long_description="""Isomer - FileManager
 ====================
 
-The file manager module offers a node local file manager.
+Node local file management.
 
 This software package is a plugin module for Isomer.
 """,
-      dependency_links=[
-      ],
-      install_requires=[
-          'isomer>=1.0.0',
-      ],
-      entry_points="""[isomer.components]
+    dependency_links=[
+    ],
+    install_requires=[
+        'isomer>=1.0.0',
+    ],
+    entry_points="""[isomer.components]
     filemanager=isomer.filemanager.manager:FileManager
     [isomer.schemata]
     file=isomer.filemanager.file:File
@@ -51,5 +52,5 @@ This software package is a plugin module for Isomer.
     [isomer.provisions]
     volume=isomer.filemanager.provisions.volume:provision
     """,
-      test_suite="tests.main.main",
-      )
+    test_suite="tests.main.main",
+)
