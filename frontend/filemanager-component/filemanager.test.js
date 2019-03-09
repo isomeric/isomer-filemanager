@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { assert } from 'chai';
+import {assert} from 'chai';
 
 import fileManager from './filemanager';
 

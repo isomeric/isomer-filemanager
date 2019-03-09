@@ -80,7 +80,7 @@ class FileManagerService {
         */
 
 
-        this.getRequestId = function() {
+        this.getRequestId = function () {
             this.requests += 1;
 
             return this.requestId++;
@@ -147,7 +147,7 @@ class FileManagerService {
             return query;
         };
 
-        this.getDirectory = function(uuid) {
+        this.getDirectory = function (uuid) {
             console.log('[FMS] Clicked on node ', uuid);
 
             let reqid = self.getRequestId();

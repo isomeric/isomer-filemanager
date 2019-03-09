@@ -27,7 +27,7 @@ import './filemanager.scss';
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import { routing } from './filemanager.config.js';
+import {routing} from './filemanager.config.js';
 
 import FileManagerComponent from './filemanager-component/filemanager';
 import template from './filemanager-component/filemanager.tpl.html';
